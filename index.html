@@ -22,7 +22,7 @@
             --EX3) Write a selector to target the "continue reading..." inside the jumbotron
   ask why have to be 3rd,no t the 2nd          EX4) Write a selector to target the first blogpost
             --EX5) Write a selector to target the "even" links in the navbar
-            EX6) Write a selector to target the last blog post
+            --EX6) Write a selector to target the last blog post
             EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives )
             EX8) Write a selector to target the second post author
             EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly
@@ -415,12 +415,50 @@
     </footer>
 
     <script>
+
+        /* const newLinkFunc = function(){
+            const navNode = document.querySelector("nav")
+            const newA = document.createElement("a")
+            let text = document.createTextNode("my title text")
+            newA.title = "my title text";
+            newA.href = "http://example.com";
+            newA.appendChild(text)
+            navNode.apprendChild(newA)
+        }
+        newLinkFunc() */
+
+        const mainTitleFunc = function(){
+            const titleNode = document.querySelector("title")
+            titleNode.innerText = "changed"
+        }
+        mainTitleFunc()
+
+        const jumboBack = function(){
+            const jumboNode=document.getElementsByClassName("jumbotron")[0]
+            jumboNode.classList.remove("bg-dark")
+            jumboNode.style.backgroundColor="brown"
+        }/* you can do it adding a class, maybe with !important */
+        jumboBack()
+
+       /*  const linkRemover = function(){
+            const olNode = document.getElementsByClassName("list-unstyled")[1]
+            olNode.remove()
+        }
+        linkRemover() */
+
+        const linkRemover = function(){
+            const aTag = document.querySelectorAll(".list-unstyled ol li a")
+            for(let i=0;i<aTag.length;i++){
+                aTag[i].remove()
+            }
+        }
+        // linkRemover()
         /*
           JS Exercises
-          EX11) Write a function to add a new link into the navbar
-          EX12) Write a function to change the color of the main title
-          EX13) Write a function to change the background of the jumbotron
-          EX14) Write a function to remove all the links under "Elsewhere"
+      fail    EX11) Write a function to add a new link into the navbar
+          --EX12) Write a function to change the color of the main title
+         -- EX13) Write a function to change the background of the jumbotron
+ask fot it     EX14) Write a function to remove all the links under "Elsewhere"
           EX15) Write a function to change the column size for heading in jumbotron
           EX16) Write a function to remove the "Search" magnifying glass icon
           EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
