@@ -23,8 +23,8 @@
   ask why have to be 3rd,no t the 2nd          EX4) Write a selector to target the first blogpost
             --EX5) Write a selector to target the "even" links in the navbar
             --EX6) Write a selector to target the last blog post
-            EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives )
-            EX8) Write a selector to target the second post author
+            --EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives )
+            --EX8) Write a selector to target the second post author
             EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly
             EX10) Write a selector to target the footer
         */
@@ -51,7 +51,17 @@
              font-weight: 500;
          }
 
+         ol:first-of-type li{
+             color: teal;
+         }
 
+
+        .blog-post:nth-child(3) > p.blog-post-meta > a {
+            font-size: large;
+            font-weight: 600;
+            color: tomato;
+
+        }
     </style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -453,6 +463,7 @@
             }
         }
         // linkRemover()
+
         /*
           JS Exercises
       fail    EX11) Write a function to add a new link into the navbar
