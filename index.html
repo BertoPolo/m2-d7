@@ -457,12 +457,14 @@
         linkRemover() */
 
         const linkRemover = function(){
-            const aTag = document.querySelectorAll(".list-unstyled ol li a")
+            const aTag = document.querySelectorAll(".blog-sidebar div:last-of-type ol li a ")
+            console.log(aTag)
             for(let i=0;i<aTag.length;i++){
                 aTag[i].remove()
             }
         }
-        // linkRemover()
+       linkRemover()
+       
 
         /*
           JS Exercises
